@@ -1,6 +1,6 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { exec, mkdtemp } from './util';
+import { exec } from './util';
 import { compile } from './compile';
 import { Options } from './options';
 import { ncp as _ncp } from 'ncp';
