@@ -23,7 +23,8 @@
     "eslint": "eslint . --ext .ts",
     "test": "yarn eslint && jest --passWithNoTests",
     "test:watch": "jest --watch",
-    "test:update": "jest --updateSnapshot"
+    "test:update": "jest --updateSnapshot",
+    "prepare": "yarn build"
   },
   "author": {
     "name": "Elad Ben-Israel",
