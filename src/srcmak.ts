@@ -15,9 +15,10 @@ export async function srcmak(srcdir: string, options: Options = { }) {
     throw new Error(`unable to find source directory ${srcdir}`);
   }
 
-  await mkdtemp(async workdir => {
+  const workdir = srcdir;
+  //await mkdtemp(async workdir => {
     // copy sources to temp directory
-    await fs.copy(srcdir, workdir);
+    // await fs.copy(srcdir, workdir);
 
     // perform jsii compilation
     await compile(workdir, options);
@@ -44,5 +45,5 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       await fs.mkdirp(target); // make sure target directory exists
       await ncp(source, target, { clobber: false });
     }
-  });
+  //});
 }
