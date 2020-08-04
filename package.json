@@ -24,7 +24,7 @@
     "test": "yarn eslint && jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
-    "prepare": "yarn build"
+    "prepare": "yarn compile && yarn run package"
   },
   "author": {
     "name": "Elad Ben-Israel",
@@ -47,7 +47,7 @@
     "json-schema": "^0.2.5",
     "jest": "^26.0.1",
     "@types/jest": "^26.0.7",
-    "ts-jest": "^26.1.0",
+    "ts-jest": "^25.5.1",
     "@types/node": "^10.17.0"
   },
   "peerDependencies": {},
